@@ -38,7 +38,7 @@ python setup.py install
 <br>
 
 ## Execution
-When run, the generated executable will execute the SPWN code within. For speed, it stores this code in a temporary file. The generated executable can be executed with 3 flags:
+When run, the generated executable will execute the SPWN code within. For speed, it stores this code in a temporary directory. The generated executable can be executed with 3 flags:
 ```
 no flags - runs the spwn code and keeps the temporary directory
 ```
