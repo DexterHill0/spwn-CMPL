@@ -1,6 +1,9 @@
 # spwn-CMPL
 Compile your SPWN files into a standalone executable!
 
+### Notes
+* The code was written to work across all platforms, but the container exectuable has only been compiled for windows, so it will need to be compiled for the other platforms.
+
 ## Installation
 ### Requirements
 * `python >= 3.6`
