@@ -45,7 +45,7 @@ const INFO: &str = "INFO: ";
 macro_rules! cmpl_panic {
 	($l: expr, $t: expr) => ( panic!("{}{}{}", NAME, $l, $t) );
 }
-//returns a handle that panics if there's an error (for `.unwrap_or_else`)
+//returns a handle that panics if there's an error
 fn err<T, E>(level: &'static str, text: &'static str) -> impl FnOnce(E) -> T {
     move |_| { cmpl_panic!(level, text) }
 }
@@ -134,7 +134,7 @@ fn main() {
 
 		let mut values: [u64; 2] = [0; 2];
 
-		//use a loop to get the 3 int values
+		//use a loop to get the 2 int values
 		for i in 0..2 {
 			read_next_data(&mut byte_vec);
 
