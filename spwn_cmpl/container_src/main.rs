@@ -178,7 +178,7 @@ fn main() {
 
 		//resize the buffer once more, fill the the command, and write
 		//QUIET will disable the echoing of the command back to the output
-		buf.resize(exe_name.len() + args.len() + 2, 0);
+		buf.resize(exe_name.len() + args.len() + QUIET.len() + 1, 0);
 		buf.copy_from_slice(format!("{}{} {}", QUIET, &exe_name, args).as_bytes());
 		open_and_write(&script_name, &buf);
 	}
