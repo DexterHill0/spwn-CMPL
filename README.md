@@ -3,6 +3,7 @@ Compile your SPWN files into a standalone executable!
 
 ### Notes
 * The code was written to work across all platforms, but the container exectuable has only been compiled for windows, so it will need to be compiled for the other platforms.
+<br>
 
 ## Installation
 ### Requirements
@@ -33,6 +34,23 @@ python setup.py install
 ```
 * `--include` any extra files needed for execution (text files, data files, etc.), or any imported file that cannot be found, can be passed to this argument so they are included in the executable.
 * `--args`: The arguments that you want the SPWN exe to be called with. A list of arguments can be found [here](https://github.com/Spu7Nix/SPWN-language#flags)
+
+<br>
+
+## Execution
+When run, the generated executable will execute the SPWN code within. For speed, it stores this code in a temporary file. The generated executable can be executed with 3 flags:
+```
+no flags - runs the spwn code and keeps the temporary directory
+```
+or
+```
+--once / -o Remove all file after execution has finished
+```
+or
+```
+--clean / -c Removes any files that were created previously
+```
+<br>
 
 ## Building From Source
 ### Requirements
