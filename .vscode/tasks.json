@@ -1,0 +1,53 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Cargo Build - Dev",
+			"type": "shell",
+			"command": "cargo",
+			"args": [
+				"build",
+				"--manifest-path",
+				"spwn_cmpl/Cargo.toml"
+			],
+			"problemMatcher": [
+				"$rustc"
+			]
+		},
+		{
+			"label": "release",
+			"type": "shell",
+			"command": "cargo",
+			"args": [
+				"build",
+				"--release",
+				"--manifest-path",
+				"spwn_cmpl/Cargo.toml"
+			]
+		},
+		{
+			"label": "move",
+			"type": "shell",
+			"windows": {
+				"command": "move ./spwn_cmpl/target/release/out.exe ./containers/windows"
+			},
+			"osx": {
+				"command": "mv ./spwn_cmpl/target/release/out ./containers/darwin"
+			},
+			"linux": {
+				"command": "mv ./spwn_cmpl/target/release/out ./containers/linux"
+			}
+		},
+		{
+			"label": "Cargo Build - Release",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"release",
+				"move"
+			],
+			"problemMatcher": [
+				"$rustc"
+			]
+		}
+	],
+}

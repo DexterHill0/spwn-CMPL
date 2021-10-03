@@ -1,0 +1,6 @@
+/spwn_cmpl/target
+*.lock
+.vscode/settings.json
+/build
+/dist
+/spwn_CMPL.egg-info
