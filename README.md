@@ -1,6 +1,8 @@
 # spwn-CMPL
 Compile your SPWN files into a standalone executable!
 
+<sup>Name by</sup> [<sup>@Deltara3</sup>](https://github.com/Deltara3)
+
 ### Notes
 * The code was written to work across all platforms, but the container exectuable has only been compiled for windows, so it will need to be compiled for the other platforms.
 <br>
