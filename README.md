@@ -11,6 +11,7 @@ Compile your SPWN files into a standalone executable!
 ### Requirements
 * `python >= 3.6`
 * `regex >= 2021.8.28` ([regex](https://pypi.org/project/regex/))
+
 Clone the repository:
 ```bash
 mkdir spwn-CMPL
